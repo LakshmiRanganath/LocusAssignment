@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="42l-0y-b78">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Locus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Locus Weather App" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdQ-WT-L5R">
+                                <rect key="frame" x="10" y="188" width="394" height="33"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" red="0.67843137249999996" green="0.66274509800000003" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="30"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jee-na-cTW">
+                                <rect key="frame" x="132" y="538" width="150" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IyB-ob-sGl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="sTm-xV-hEk"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Lookup">
+                                            <attributes>
+                                                <font key="NSFont" size="28" name="Thonburi"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lookUpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vDy-Vg-7S3"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3y8-ji-0ia">
+                                <rect key="frame" x="157" y="658" width="100" height="100"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HYc-1e-efq"/>
+                                    <constraint firstAttribute="height" constant="100" id="sUL-gA-W8x"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter the city to search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKe-eX-OPM">
+                                <rect key="frame" x="50" y="418" width="314" height="60"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CUN-s4-VEQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi-Light" family="Thonburi" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mSv-1K-TAX"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.1450980392" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="HKe-eX-OPM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Vg-PZ-eQD"/>
+                            <constraint firstItem="jdQ-WT-L5R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="5zn-Zf-cH7"/>
+                            <constraint firstItem="3y8-ji-0ia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jmz-Mt-ZKu"/>
+                            <constraint firstItem="HKe-eX-OPM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LWc-B7-0EU"/>
+                            <constraint firstItem="jdQ-WT-L5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Sk2-lf-vwm"/>
+                            <constraint firstItem="jee-na-cTW" firstAttribute="top" secondItem="HKe-eX-OPM" secondAttribute="bottom" constant="60" id="UJO-Bq-3Iz"/>
+                            <constraint firstItem="jdQ-WT-L5R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XGM-xZ-DXm"/>
+                            <constraint firstItem="jee-na-cTW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ogN-Gg-Mej"/>
+                            <constraint firstItem="HKe-eX-OPM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="owy-3t-SHq"/>
+                            <constraint firstItem="3y8-ji-0ia" firstAttribute="top" secondItem="jee-na-cTW" secondAttribute="bottom" constant="60" id="toH-zc-3Ln"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ln6-cL-nJs"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="3y8-ji-0ia" id="ca3-06-NwB"/>
+                        <outlet property="lookupButton" destination="jee-na-cTW" id="931-RH-kdu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+        <!--CityWeatherForecastViewController-->
+        <scene sceneID="jMz-CB-3BW">
+            <objects>
+                <viewController storyboardIdentifier="CityWeatherForecastViewController" title="CityWeatherForecastViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9M1-fz-bCl" customClass="CityWeatherForecastViewController" customModule="Locus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4XJ-yQ-5Ns">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Nl-WX-Vrw">
+                                <rect key="frame" x="-2" y="88" width="416" height="774"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.33333333329999998" green="0.56862745100000001" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.86670070889999995" green="0.87046080830000006" blue="0.8784326911" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.33333333329999998" green="0.56862745100000001" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9M1-fz-bCl" id="T8X-hw-ndg"/>
+                                    <outlet property="delegate" destination="9M1-fz-bCl" id="9p6-Fn-fyx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WBd-5Y-hc0"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.33333333329999998" green="0.56862745100000001" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="WBd-5Y-hc0" firstAttribute="trailing" secondItem="0Nl-WX-Vrw" secondAttribute="trailing" id="01Z-mI-ftB"/>
+                            <constraint firstItem="0Nl-WX-Vrw" firstAttribute="top" secondItem="WBd-5Y-hc0" secondAttribute="top" id="33y-yX-HbF"/>
+                            <constraint firstItem="0Nl-WX-Vrw" firstAttribute="leading" secondItem="WBd-5Y-hc0" secondAttribute="leading" constant="-2" id="9E0-8D-Vzt"/>
+                            <constraint firstItem="WBd-5Y-hc0" firstAttribute="bottom" secondItem="0Nl-WX-Vrw" secondAttribute="bottom" id="Jsa-5s-GMM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CbR-Nx-WDD"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="weatherForecastTableView" destination="0Nl-WX-Vrw" id="tto-Dp-5AW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8FL-6s-89X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457.9710144927537" y="193.52678571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lVA-Bd-wDn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="42l-0y-b78" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wik-x1-SKc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2qp-LJ-IgD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2rW-Fu-XRf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oW4-dC-hf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+        <!--ForecastDetailViewController-->
+        <scene sceneID="12f-Tu-v9R">
+            <objects>
+                <viewController storyboardIdentifier="ForecastDetailViewController" title="ForecastDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DQm-8u-2ZX" customClass="ForecastDetailViewController" customModule="Locus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GD8-l5-Jy8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q56-gA-Jxp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="DQm-8u-2ZX" id="v8i-it-keI"/>
+                                    <outlet property="delegate" destination="DQm-8u-2ZX" id="BdU-dJ-vLx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mYu-ms-IOh"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mYu-ms-IOh" firstAttribute="bottom" secondItem="q56-gA-Jxp" secondAttribute="bottom" id="Cth-cH-UX7"/>
+                            <constraint firstItem="q56-gA-Jxp" firstAttribute="leading" secondItem="mYu-ms-IOh" secondAttribute="leading" id="HAy-nF-eQS"/>
+                            <constraint firstItem="q56-gA-Jxp" firstAttribute="top" secondItem="mYu-ms-IOh" secondAttribute="top" id="RNk-Sy-haX"/>
+                            <constraint firstItem="mYu-ms-IOh" firstAttribute="trailing" secondItem="q56-gA-Jxp" secondAttribute="trailing" id="TzK-yM-dEc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="forecastDetailTableView" destination="q56-gA-Jxp" id="jr3-eX-1ir"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2g-fG-di5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637.68115942028987" y="-575.22321428571422"/>
+        </scene>
+    </scenes>
+</document>

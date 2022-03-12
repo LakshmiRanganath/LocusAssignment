@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WeatherForecastTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WeatherForecastTableViewCell" rowHeight="292" id="lae-C3-JGf" customClass="WeatherForecastTableViewCell" customModule="Locus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="462" height="212"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lae-C3-JGf" id="caO-kr-yyD">
+                <rect key="frame" x="0.0" y="0.0" width="462" height="212"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-h0-XC3">
+                        <rect key="frame" x="30" y="15" width="73" height="33"/>
+                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jUm-7r-xQ9" customClass="CacheImageView" customModule="Locus" customModuleProvider="target">
+                        <rect key="frame" x="30" y="58" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="jUm-7r-xQ9" secondAttribute="height" multiplier="1:1" id="lfr-DJ-49t"/>
+                            <constraint firstAttribute="height" constant="60" id="s9i-L9-lao"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iJ-hC-jY9">
+                        <rect key="frame" x="383" y="15" width="27" height="26.5"/>
+                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLN-ab-BbL">
+                        <rect key="frame" x="383" y="157.5" width="27" height="39.5"/>
+                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xnG-Fq-6Qr">
+                        <rect key="frame" x="415" y="16" width="17" height="24.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-cu-oYc">
+                        <rect key="frame" x="415" y="158.5" width="17" height="37.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-tP-mdP">
+                        <rect key="frame" x="30" y="166" width="41" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="oLN-ab-BbL" firstAttribute="centerY" secondItem="CNr-cu-oYc" secondAttribute="centerY" id="1Zc-dh-0dQ"/>
+                    <constraint firstItem="Fai-h0-XC3" firstAttribute="top" secondItem="caO-kr-yyD" secondAttribute="top" constant="15" id="6gL-KS-vaW"/>
+                    <constraint firstItem="xnG-Fq-6Qr" firstAttribute="top" secondItem="5iJ-hC-jY9" secondAttribute="top" id="7ZV-BA-AYY"/>
+                    <constraint firstAttribute="trailing" secondItem="xnG-Fq-6Qr" secondAttribute="trailing" constant="30" id="Hq5-ot-HUG"/>
+                    <constraint firstItem="Fai-h0-XC3" firstAttribute="leading" secondItem="caO-kr-yyD" secondAttribute="leading" constant="30" id="J3G-p7-bgK"/>
+                    <constraint firstItem="xnG-Fq-6Qr" firstAttribute="leading" secondItem="5iJ-hC-jY9" secondAttribute="trailing" constant="5" id="MHS-US-atb"/>
+                    <constraint firstItem="CNr-cu-oYc" firstAttribute="trailing" secondItem="xnG-Fq-6Qr" secondAttribute="trailing" id="NIT-2C-JVV"/>
+                    <constraint firstItem="oLN-ab-BbL" firstAttribute="top" secondItem="CNr-cu-oYc" secondAttribute="top" id="Sf9-At-23A"/>
+                    <constraint firstItem="jUm-7r-xQ9" firstAttribute="leading" secondItem="Fai-h0-XC3" secondAttribute="leading" id="UGV-V0-crv"/>
+                    <constraint firstItem="Qbh-tP-mdP" firstAttribute="leading" secondItem="Fai-h0-XC3" secondAttribute="leading" id="VrO-xf-Zm3"/>
+                    <constraint firstItem="5iJ-hC-jY9" firstAttribute="top" secondItem="Fai-h0-XC3" secondAttribute="top" id="YEu-Kk-RX4"/>
+                    <constraint firstItem="CNr-cu-oYc" firstAttribute="leading" secondItem="oLN-ab-BbL" secondAttribute="trailing" constant="5" id="aZ5-c6-lSe"/>
+                    <constraint firstItem="CNr-cu-oYc" firstAttribute="width" secondItem="xnG-Fq-6Qr" secondAttribute="width" id="cGE-1h-P4R"/>
+                    <constraint firstItem="CNr-cu-oYc" firstAttribute="height" secondItem="xnG-Fq-6Qr" secondAttribute="height" multiplier="1.48276" id="eDK-jb-lAS"/>
+                    <constraint firstItem="jUm-7r-xQ9" firstAttribute="top" secondItem="Fai-h0-XC3" secondAttribute="bottom" constant="10" id="g3c-WI-B4V"/>
+                    <constraint firstItem="Qbh-tP-mdP" firstAttribute="centerY" secondItem="oLN-ab-BbL" secondAttribute="centerY" id="g6p-Jf-8eJ"/>
+                    <constraint firstItem="xnG-Fq-6Qr" firstAttribute="height" secondItem="5iJ-hC-jY9" secondAttribute="height" multiplier="1:1" id="n79-kh-S14"/>
+                    <constraint firstItem="5iJ-hC-jY9" firstAttribute="leading" secondItem="oLN-ab-BbL" secondAttribute="leading" id="ogQ-sp-Dxk"/>
+                    <constraint firstItem="xnG-Fq-6Qr" firstAttribute="centerY" secondItem="5iJ-hC-jY9" secondAttribute="centerY" id="pOk-9E-p0K"/>
+                    <constraint firstAttribute="bottom" secondItem="oLN-ab-BbL" secondAttribute="bottom" constant="15" id="wa8-Nh-EaZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="maxTemperatureLabel" destination="5iJ-hC-jY9" id="XpP-98-ToQ"/>
+                <outlet property="minTemperatureLabel" destination="oLN-ab-BbL" id="S5I-9j-Y4e"/>
+                <outlet property="weatherDescriptionLabel" destination="Qbh-tP-mdP" id="2eu-eP-sQV"/>
+                <outlet property="weatherIconImageView" destination="jUm-7r-xQ9" id="J3T-0A-bbe"/>
+                <outlet property="weekLabel" destination="Fai-h0-XC3" id="9qQ-AW-kas"/>
+            </connections>
+            <point key="canvasLocation" x="159.42028985507247" y="-277.90178571428572"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+    </resources>
+</document>
